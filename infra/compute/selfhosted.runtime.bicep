@@ -28,7 +28,7 @@ module nic 'br/public:avm/res/network/network-interface:0.5.2' = {
 }
 
 resource vm 'Microsoft.Compute/virtualMachines@2024-11-01' = {
-  name: 'selfhosted-runtime'
+  name: 'selfhosted'
   location: location
   properties: {
     hardwareProfile: {
@@ -56,7 +56,7 @@ resource vm 'Microsoft.Compute/virtualMachines@2024-11-01' = {
       ]
     }
     osProfile: {
-      computerName: 'selfhosted-runtime'
+      computerName: 'selfhosted'
       adminUsername: adminUsername
       adminPassword: adminPassword
     }
