@@ -10,6 +10,12 @@ param snetFileServerAddressPrefix string
 param snetRuntimeServerAddressPrefix string
 param snetSqlServerAddressPrefix string
 
+param landingZoneAddressPrefix string
+param snetGhAgentAddressPrefix string
+param snetJumpboxAddressPrefix string
+param snetPrivateEndpointAddressPrefix string
+param snetASEAddressPrefix string
+
 @secure()
 param adminUsername string
 @secure()
@@ -33,6 +39,18 @@ module onPremiseNetwork 'network/onpremise.bicep' = {
     snetFileServerAddressPrefix: snetFileServerAddressPrefix
     snetRuntimeServerAddressPrefix: snetRuntimeServerAddressPrefix
     snetSqlServerAddressPrefix: snetSqlServerAddressPrefix
+  }
+}
+
+module landingZoneNetwork 'network/integration.bicep' = {
+  scope: rgLandingZone
+  params: {
+    location: location
+    addressPrefix: landingZoneAddressPrefix
+    snetGhAgentAddressPrefix: snetGhAgentAddressPrefix
+    snetJumpboxAddressPrefix: snetJumpboxAddressPrefix
+    snetPrivateEndpointAddressPrefix: snetPrivateEndpointAddressPrefix
+    snetASEAddressPrefix: snetASEAddressPrefix
   }
 }
 

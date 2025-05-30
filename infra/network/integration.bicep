@@ -1,7 +1,7 @@
 param location string
 param addressPrefix string
 param snetPrivateEndpointAddressPrefix string
-param snetSqlServerAddressPrefix string
+param snetASEAddressPrefix string
 param snetGhAgentAddressPrefix string
 param snetJumpboxAddressPrefix string
 
@@ -58,7 +58,7 @@ module vnet 'br/public:avm/res/network/virtual-network:0.7.0' = {
       }
       {
         name: 'snet-ase'
-        addressPrefix: snetSqlServerAddressPrefix
+        addressPrefix: snetASEAddressPrefix
         networkSecurityGroupResourceId: nsgAse.outputs.resourceId
         delegation: 'Microsoft.Web/hostingEnvironments'
       }
