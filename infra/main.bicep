@@ -45,3 +45,13 @@ module fileserver 'compute/fileserver.bicep' = {
     subnetResourceId: onPremiseNetwork.outputs.subnetResourceIds[0]
   }
 }
+
+module selfhostedruntime 'compute/selfhosted.runtime.bicep' = {
+  scope: rgOnPremise
+  params: {
+    location: location
+    adminPassword: adminPassword
+    adminUsername: adminUsername
+    subnetResourceId: onPremiseNetwork.outputs.subnetResourceIds[2]
+  }
+}
