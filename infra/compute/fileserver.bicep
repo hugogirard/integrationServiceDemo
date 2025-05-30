@@ -27,7 +27,14 @@ module nic 'br/public:avm/res/network/network-interface:0.5.2' = {
   }
 }
 
-resource vm 'Microsoft.Compute/virtualMachines@2024-11-01' = {
+/* Validate if the VM exist if yes we don't recreate it, this avoid if we run template often */
+resource existingVm 'Microsoft.Compute/virtualMachines@2024-11-01' existing = {
+  name: 'fileserver'
+}
+
+var vmParts = split(existingVm.id, '/')
+
+resource vm 'Microsoft.Compute/virtualMachines@2024-11-01' = if (vmParts[8] != 'fileserver') {
   name: 'fileserver'
   location: location
   properties: {

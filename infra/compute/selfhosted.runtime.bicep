@@ -59,11 +59,6 @@ resource vm 'Microsoft.Compute/virtualMachines@2024-11-01' = {
       computerName: 'selfhosted-runtime'
       adminUsername: adminUsername
       adminPassword: adminPassword
-      linuxConfiguration: {
-        patchSettings: {
-          patchMode: 'AutomaticByPlatform'
-        }
-      }
     }
     diagnosticsProfile: {
       bootDiagnostics: {
