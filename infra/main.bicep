@@ -66,3 +66,11 @@ module storage 'storage/storage.bicep' = {
     suffix: replace(landingZoneSuffix, '-', '')
   }
 }
+
+module factory 'datafactory/factory.bicep' = {
+  scope: rgLandingZone
+  params: {
+    location: location
+    suffix: landingZoneSuffix
+  }
+}
