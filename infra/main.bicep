@@ -55,3 +55,14 @@ module selfhostedruntime 'compute/selfhosted.runtime.bicep' = {
     subnetResourceId: onPremiseNetwork.outputs.subnetResourceIds[2]
   }
 }
+
+var landingZoneSuffix = uniqueString(rgOnPremise.id)
+
+module storage 'storage/storage.bicep' = {
+  scope: rgLandingZone
+  params: {
+    location: location
+    subnetResourceId: onPremiseNetwork.outputs.subnetResourceIds[0]
+    suffix: replace(landingZoneSuffix, '-', '')
+  }
+}
