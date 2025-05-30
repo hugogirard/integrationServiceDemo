@@ -58,12 +58,17 @@ module selfhostedruntime 'compute/selfhosted.runtime.bicep' = {
 
 var landingZoneSuffix = uniqueString(rgOnPremise.id)
 
+module privateDnsZone 'dns/private.dns.zone.bicep' = {
+  scope: rgLandingZone
+}
+
 module storage 'storage/storage.bicep' = {
   scope: rgLandingZone
   params: {
     location: location
     subnetResourceId: onPremiseNetwork.outputs.subnetResourceIds[0]
     suffix: replace(landingZoneSuffix, '-', '')
+    blobDnsResourceId: privateDnsZone.outputs.blobDnsResourceId
   }
 }
 
@@ -72,5 +77,8 @@ module factory 'datafactory/factory.bicep' = {
   params: {
     location: location
     suffix: landingZoneSuffix
+    subnetResourceId: onPremiseNetwork.outputs.subnetResourceIds[0]
+    datafactoryDnsZoneResourceId: privateDnsZone.outputs.dataFactoryDnsResourceId
+    portalDnsZoneResourceId: privateDnsZone.outputs.dataFactoryPortalResourceId
   }
 }

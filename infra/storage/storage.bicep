@@ -1,6 +1,7 @@
 param location string
 param suffix string
 param subnetResourceId string
+param blobDnsResourceId string
 
 module storageAccount 'br/public:avm/res/storage/storage-account:0.20.0' = {
   params: {
@@ -22,6 +23,13 @@ module storageAccount 'br/public:avm/res/storage/storage-account:0.20.0' = {
       {
         subnetResourceId: subnetResourceId
         service: 'blob'
+        privateDnsZoneGroup: {
+          privateDnsZoneGroupConfigs: [
+            {
+              privateDnsZoneResourceId: blobDnsResourceId
+            }
+          ]
+        }
       }
     ]
   }
