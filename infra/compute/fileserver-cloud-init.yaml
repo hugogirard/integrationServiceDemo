@@ -1,0 +1,13 @@
+#cloud-config
+package_upgrade: true
+packages:
+  - curl
+  - git
+  - install
+  - ca-certificates
+  - gnupg
+  - lsb-release
+  - jq
+  - nodejs
+  - dotnet-sdk-9.0
+runcmd:

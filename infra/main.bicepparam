@@ -9,3 +9,7 @@ param snetFileServerAddressPrefix = '172.16.1.0/28'
 param snetRuntimeServerAddressPrefix = '172.16.2.0/28'
 
 param snetSqlServerAddressPrefix = '172.16.3.0/28'
+
+param adminPassword = ''
+
+param adminUsername = ''
