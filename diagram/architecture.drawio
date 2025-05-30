@@ -1,0 +1,42 @@
+<mxfile host="65bd71144e">
+    <diagram id="dXqE86ZV0hpkT8sRUsj5" name="Page-1">
+        <mxGraphModel dx="1057" dy="779" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="light-dark(#FFFFFF,#FFFFFF)" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Mock on-premise&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;virtual network&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#000000,#000099);dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+                    <mxGeometry x="57" y="249" width="320" height="224" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Sql Server" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Virtual_Machine.svg;labelBackgroundColor=none;fontColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+                    <mxGeometry x="251" y="305" width="42.05" height="39" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Data Factory&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Self Hosted Runtime&lt;/font&gt;&lt;/div&gt;" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/compute/Virtual_Machine.svg;labelBackgroundColor=none;fontColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+                    <mxGeometry x="199" y="394" width="42.05" height="39" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="File Exchange" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/VM_Linux.svg;labelBackgroundColor=none;fontColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+                    <mxGeometry x="147" y="298" width="50" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/databases/Data_Factory.svg;" vertex="1" parent="1">
+                    <mxGeometry x="524" y="120" width="46" height="46" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="edgeStyle=none;html=1;" edge="1" parent="1" source="8">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="637" y="553" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="8" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Integration Landing&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Zone&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#000000,#000099);dashed=1;labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+                    <mxGeometry x="477" y="249" width="535" height="224" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Private endpoint&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;subnet&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#000000,#000099);labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+                    <mxGeometry x="505" y="310" width="93" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;App Service Environment&amp;nbsp;&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;color: light-dark(rgb(0, 0, 0), rgb(0, 0, 0));&quot;&gt;Subnet&lt;/font&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#000000,#000099);labelPosition=center;verticalLabelPosition=bottom;align=center;verticalAlign=top;fontColor=light-dark(#000000,#000000);" vertex="1" parent="1">
+                    <mxGeometry x="687" y="310" width="232" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/app_services/App_Service_Environments.svg;" vertex="1" parent="1">
+                    <mxGeometry x="381" y="535" width="45" height="45" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
